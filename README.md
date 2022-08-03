@@ -1,3 +1,3 @@
-LSRP 1:1 SA:MP Gamemode (Self written)
+LS-RP Gamemode by Sketchy Guy...
 
 Server models: https://www.mediafire.com/file/u26t910ogrf62e1/models.rar/file
