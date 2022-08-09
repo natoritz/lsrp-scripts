@@ -23,12 +23,6 @@ static const FactionTypes[][] =
 	"CORRECTIONAL"
 };
 
-ReturnFactionNameByType(faction)
-{
-	if(faction < 1 || faction >= sizeof(FactionTypes)) return "None";
-	else return FactionTypes[faction];
-}
-
 // Variables
 
 enum E_FACTION_DATA
@@ -224,6 +218,12 @@ CanFactionDuty(type)
     }
 
     return false;
+}
+
+ReturnFactionNameByType(faction)
+{
+	if(faction < 1 || faction >= sizeof(FactionTypes)) return "None";
+	else return FactionTypes[faction];
 }
 
 ViewFactions2(playerid)
