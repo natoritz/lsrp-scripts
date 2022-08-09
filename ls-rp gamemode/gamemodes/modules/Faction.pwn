@@ -11,7 +11,7 @@
 #define MAX_FACTIONS (8)
 #define MAX_FACTION_SPAWNS (5)
 
-static const FactionTypes[] = 
+static const FactionTypes[][] = 
 {
 	"NONE",
 	"LSPD",
@@ -20,7 +20,7 @@ static const FactionTypes[] =
 	"GOV",
 	"GANG",
 	"SHERIFF",
-	"CORRECTIONAL",
+	"CORRECTIONAL"
 };
 
 ReturnFactionNameByType(faction)
