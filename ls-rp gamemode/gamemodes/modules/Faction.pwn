@@ -11,18 +11,6 @@
 #define MAX_FACTIONS (8)
 #define MAX_FACTION_SPAWNS (5)
 
-static const FactionTypes[][] = 
-{
-	"NONE",
-	"LSPD",
-	"NEWS",
-	"MEDIC",
-	"GOV",
-	"GANG",
-	"SHERIFF",
-	"CORRECTIONAL"
-};
-
 // Variables
 
 enum E_FACTION_DATA
@@ -222,8 +210,39 @@ CanFactionDuty(type)
 
 ReturnFactionNameByType(faction)
 {
-	if(faction < 1 || faction >= sizeof(FactionTypes)) return "None";
-	else return FactionTypes[faction];
+	new string[60];
+	switch(faction)
+	{
+		case FACTION_POLICE:
+		{
+			format(string, 60, "LSPD");
+		}
+		case FACTION_NEWS:
+		{
+			format(string, 60, "NEWS");
+		}
+		case FACTION_MEDIC:
+		{
+			format(string, 60, "MEDIC");
+		}
+		case FACTION_GOV:
+		{
+			format(string, 60, "GOV");
+		}
+		case FACTION_SHERIFF:
+		{
+			format(string, 60, "SHERIFF");
+		}
+		case FACTION_CORRECTIONAL:
+		{
+			format(string, 60, "CORRECTIONAL");
+		}
+		default:
+		{
+			format(string, 60, "NONE");
+		}
+	}
+	return string;
 }
 
 ViewFactions2(playerid)
